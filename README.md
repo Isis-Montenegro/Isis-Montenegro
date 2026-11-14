@@ -42,6 +42,6 @@ Me gusta crear y descubrir cómo funcionan las cosas. Exploro la robótica, el d
   <br/><br/>
   
   <h3>📫 Conecta conmigo</h3>
-  <a href="https://isismontenegro.com"><img src="https://img.shields.io/badge/Portafolio_Web-252525?style=for-the-badge&logo=google-chrome&logoColor=white" /></a>
+  <a href="https://github.com/Isis-Montenegro"><img src="https://img.shields.io/badge/Mi_GitHub-181717?style=for-the-badge&logo=github&logoColor=white" /></a>
   <a href="https://linkedin.com/in/tu-perfil"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" /></a>
 </div>
