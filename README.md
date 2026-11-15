@@ -34,7 +34,7 @@ Me gusta crear y descubrir cómo funcionan las cosas. Exploro la robótica, el d
 * <a href="https://juego-limones-ecru.vercel.app/" target="_blank"><strong>🕹️ Ecosistema Web (JavaScript):</strong></a> Desarrollo de aplicaciones interactivas que incluyen el arcade "Cazando" (estética neón, físicas de colisión y audio), mecánicas de recolección y sistemas lógicos de votación.
 * <a href="#" target="_blank"><strong>🐍 Fundamentos y Lógica en Python:</strong></a> Colección de scripts y algoritmos enfocados en estructuras de control y resolución de problemas lógicos, sentando las bases para futuras implementaciones de IA.
 
-* 
+ 
 ---
 
 <div align="center">
