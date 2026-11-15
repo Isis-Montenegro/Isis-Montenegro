@@ -33,6 +33,8 @@ Me gusta crear y descubrir cómo funcionan las cosas. Exploro la robótica, el d
 * <a href="https://github.com/Isis-Montenegro/Project-Echo" target="_blank"><strong>👻 Project Echo en Unity (C#):</strong></a> Desarrollo de entornos interactivos y mecánicas diversas. El portafolio incluye un título *shooter*, un *runner* dinámico, y el juego de terror atmosférico "Project Echo".
 * <a href="https://juego-limones-ecru.vercel.app/" target="_blank"><strong>🕹️ Ecosistema Web (JavaScript):</strong></a> Desarrollo de aplicaciones interactivas que incluyen el arcade "Cazando" (estética neón, físicas de colisión y audio), mecánicas de recolección y sistemas lógicos de votación.
 * <a href="#" target="_blank"><strong>🐍 Fundamentos y Lógica en Python:</strong></a> Colección de scripts y algoritmos enfocados en estructuras de control y resolución de problemas lógicos, sentando las bases para futuras implementaciones de IA.
+
+* 
 ---
 
 <div align="center">
