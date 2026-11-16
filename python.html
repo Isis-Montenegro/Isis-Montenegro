@@ -32,7 +32,7 @@
 
         .header-card {
             text-align: center;
-            border-bottom: 4px solid #3776AB; /* Azul de Python */
+            border-bottom: 4px solid #3776AB;
         }
 
         .header-card h1 {
@@ -46,7 +46,6 @@
             font-size: 1.1em;
         }
 
-        /* TIPOGRAFÍA DE SECCIONES */
         h3 {
             margin-top: 0;
             font-size: 22px;
@@ -64,7 +63,7 @@
             font-size: 1.05em;
         }
 
-        /* GALERÍA DE CÓDIGO Y CONSOLA (2 COLUMNAS) */
+        /* GALERÍA DE CÓDIGO Y CONSOLA */
         .gallery {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -81,10 +80,17 @@
             border: 1px solid #EBEBEB;
         }
 
+        /* IMÁGENES CON EFECTO ZOOM */
         figure img {
             width: 100%;
             border-radius: 6px;
             box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+            cursor: zoom-in; /* Cursor de lupa */
+            transition: transform 0.2s ease;
+        }
+
+        figure img:hover {
+            transform: scale(1.02); /* Pequeño efecto al pasar el mouse */
         }
 
         figcaption {
@@ -95,7 +101,6 @@
             color: #666666;
         }
 
-        /* BOTÓN DE VOLVER */
         .btn-back {
             display: block;
             width: fit-content;
@@ -112,19 +117,62 @@
         .btn-back:hover {
             background-color: #2b5b84;
         }
+
+        /* --- ESTILOS DEL VISOR DE IMÁGENES (MODAL) --- */
+        .modal {
+            display: none; /* Oculto por defecto */
+            position: fixed;
+            z-index: 1000;
+            padding-top: 50px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.85); /* Fondo oscuro semitransparente */
+            backdrop-filter: blur(5px);
+        }
+
+        .modal-content {
+            margin: auto;
+            display: block;
+            max-width: 90%;
+            max-height: 85vh;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+            animation: zoomModal 0.3s ease;
+        }
+
+        @keyframes zoomModal {
+            from {transform: scale(0.9); opacity: 0;}
+            to {transform: scale(1); opacity: 1;}
+        }
+
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: color 0.2s;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #3776AB;
+        }
     </style>
 </head>
 <body>
 
     <div class="container">
         
-        <!-- CABECERA DE LA PÁGINA -->
         <div class="card header-card">
             <h1>🐍 Fundamentos y Lógica en Python</h1>
             <p>Scripts listos para producción con enfoque en estructuras de datos, limpieza de datos e Inteligencia Artificial.</p>
         </div>
 
-        <!-- PROYECTO 1: REVERSE INDEX -->
         <div class="card">
             <h3>🔍 1. Reverse Index Builder</h3>
             <p class="desc">Algoritmo que transforma una base de datos estructurada en un índice inverso, mapeando dinámicamente valores múltiples (como autores y géneros) de vuelta a sus claves principales. Lógica fundamental detrás de los motores de búsqueda y grafos de conocimiento.</p>
@@ -140,7 +188,6 @@
             </div>
         </div>
 
-        <!-- PROYECTO 2: ETL PIPELINE -->
         <div class="card">
             <h3>📊 2. Dataset Preprocessor (Pipeline ETL)</h3>
             <p class="desc">Pipeline de procesamiento de datos automatizado que extrae, transforma y limpia conjuntos de datos crudos. Maneja valores nulos, estandariza formatos y prepara la información para el entrenamiento de modelos de Machine Learning de forma eficiente.</p>
@@ -156,7 +203,6 @@
             </div>
         </div>
 
-        <!-- PROYECTO 3: BFS PATHFINDING -->
         <div class="card">
             <h3>🗺️ 3. Algoritmo de Búsqueda BFS (Pathfinding)</h3>
             <p class="desc">Implementación orientada a objetos del algoritmo de búsqueda en anchura (Breadth-First Search). Diseñado para encontrar la ruta más corta en matrices bidimensionales, una base esencial para la navegación espacial y el pathfinding en robótica móvil.</p>
@@ -176,5 +222,15 @@
 
     </div>
 
-</body>
-</html>
+    <!-- EL VISOR DE IMÁGENES OCULTO (MODAL) -->
+    <div id="imageModal" class="modal" onclick="closeModal()">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="expandedImg">
+    </div>
+
+    <!-- SCRIPT PARA ABRIR Y CERRAR LAS IMÁGENES -->
+    <script>
+        var modal = document.getElementById("imageModal");
+        var modalImg = document.getElementById("expandedImg");
+
+        // Buscar todas las imágenes dentro de las figuras y darles la
