@@ -17,6 +17,7 @@
         
         .content { padding: 15px; border-top: 1px solid #30363d; margin-top: 10px; line-height: 1.6; }
         
+        /* Aseguramos que la regla aplique a img y video por igual */
         .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 15px; margin-top: 15px; }
         .gallery img, .gallery video { width: 100%; border-radius: 8px; border: 1px solid #30363d; }
         
@@ -49,9 +50,9 @@
             <p>Modelado de componentes mecánicos para robótica y fluidos, evaluando tolerancias y geometría funcional.</p>
             <div class="gallery">
                 <img src="fusion1.jpeg" alt="Renderizado de una hélice o impulsor mecánico">
-                <!-- Aquí puedes agregar tus videos mp4 si los tienes, usando la etiqueta <video> -->
-                <video src="patita-perro.mp4" autoplay loop muted playsinline></video>
-                <video src="joint-360.mp4" autoplay loop muted playsinline></video>
+                <!-- Videos con controles para asegurar su visualización -->
+                <video src="patita-perro.mp4" autoplay loop muted playsinline controls></video>
+                <video src="joint-360.mp4" autoplay loop muted playsinline controls></video>
             </div>
         </div>
     </details>
