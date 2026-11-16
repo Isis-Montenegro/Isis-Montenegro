@@ -222,15 +222,42 @@
 
     </div>
 
-    <!-- EL VISOR DE IMÁGENES OCULTO (MODAL) -->
-    <div id="imageModal" class="modal" onclick="closeModal()">
-        <span class="close" onclick="closeModal()">&times;</span>
+   <!-- EL VISOR DE IMÁGENES OCULTO (MODAL) -->
+    <div id="imageModal" class="modal">
+        <span class="close">&times;</span>
         <img class="modal-content" id="expandedImg">
     </div>
 
     <!-- SCRIPT PARA ABRIR Y CERRAR LAS IMÁGENES -->
     <script>
-        var modal = document.getElementById("imageModal");
-        var modalImg = document.getElementById("expandedImg");
+        // DOMContentLoaded obliga al navegador a esperar que todo cargue primero
+        document.addEventListener('DOMContentLoaded', function() {
+            var modal = document.getElementById("imageModal");
+            var modalImg = document.getElementById("expandedImg");
+            var span = document.querySelector(".close");
+            var imgs = document.querySelectorAll("figure img");
 
-        // Buscar todas las imágenes dentro de las figuras y darles la
+            // Le asigna la función de abrir a cada imagen
+            imgs.forEach(function(img) {
+                img.addEventListener('click', function() {
+                    modal.style.display = "block";
+                    modalImg.src = this.src;
+                });
+            });
+
+            // Cierra el visor al hacer clic en la "X"
+            span.addEventListener('click', function() {
+                modal.style.display = "none";
+            });
+
+            // Cierra el visor al hacer clic en el fondo negro
+            window.addEventListener('click', function(event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
