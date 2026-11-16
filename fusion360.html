@@ -17,9 +17,9 @@
         
         .content { padding: 15px; border-top: 1px solid #30363d; margin-top: 10px; line-height: 1.6; }
         
-        /* Aseguramos que la regla aplique a img y video por igual */
+        /* Estilo uniforme para todas las imágenes y GIFs en la galería */
         .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 15px; margin-top: 15px; }
-        .gallery img, .gallery video { width: 100%; border-radius: 8px; border: 1px solid #30363d; }
+        .gallery img { width: 100%; border-radius: 8px; border: 1px solid #30363d; }
         
         a.btn { display: inline-block; margin-top: 30px; padding: 10px 20px; background: #EE4C2C; color: white; text-decoration: none; border-radius: 5px; font-weight: bold; }
         a.btn:hover { background: #ff5c3b; }
@@ -50,9 +50,10 @@
             <p>Modelado de componentes mecánicos para robótica y fluidos, evaluando tolerancias y geometría funcional.</p>
             <div class="gallery">
                 <img src="fusion1.jpeg" alt="Renderizado de una hélice o impulsor mecánico">
-                <!-- Videos con controles para asegurar su visualización -->
-               <video src="patita_perro.mp4" autoplay loop muted playsinline style="max-width: 100%; border-radius: 8px; margin-top: 10px;"></video>
-               <video src="joint_360.mp4" autoplay loop muted playsinline style="max-width: 100%; border-radius: 8px; margin-top: 10px;"></video>
+                <!-- Se usan etiquetas img para los GIFs -->
+                <img src="patita-perro.gif" alt="Animación de prótesis en movimiento">
+                <img src="joint-360.gif" alt="Animación de mecanismo rotativo">
+            </div>
         </div>
     </details>
 
