@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C++ Embedded | Isis Montenegro</title>
+    <style>
+        /* FONDO BEIGE/CREMA ELEGANTE */
+        body {
+            background-color: #F5F0E6; 
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 40px 0;
+            color: #333333;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        /* DISEÑO DE TARJETAS */
+        .card {
+            background-color: #FFFFFF;
+            border-radius: 12px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+            margin-bottom: 25px;
+            overflow: hidden;
+            padding: 25px;
+        }
+
+        .header-card {
+            text-align: center;
+            border-bottom: 4px solid #00599C; /* Azul de C++ */
+        }
+
+        .header-card h1 {
+            margin: 0 0 10px 0;
+            color: #1A1A1A;
+        }
+
+        .header-card p {
+            color: #666666;
+            margin: 0;
+            font-size: 1.1em;
+        }
+
+        h3 {
+            margin-top: 0;
+            font-size: 22px;
+            color: #1A1A1A;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        p.desc {
+            line-height: 1.6;
+            margin: 0 0 20px 0;
+            color: #444444;
+            font-size: 1.05em;
+        }
+
+        /* GRUPO DE BOTONES */
+        .btn-group {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-top: 15px;
+        }
+
+        .btn-github {
+            padding: 10px 20px;
+            background-color: #24292e;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+            transition: background-color 0.2s;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-github:hover {
+            background-color: #444d56;
+        }
+
+        .btn-demo {
+            padding: 10px 20px;
+            background-color: #0696D7;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+            transition: background-color 0.2s;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-demo:hover {
+            background-color: #057cb3;
+        }
+
+        .btn-back {
+            display: block;
+            width: fit-content;
+            margin: 30px auto 0 auto;
+            padding: 12px 24px;
+            background-color: #00599C;
+            color: white;
+            text-decoration: none;
+            border-radius: 20px;
+            font-weight: bold;
+            transition: background-color 0.2s;
+        }
+
+        .btn-back:hover {
+            background-color: #00457a;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <div class="card header-card">
+            <h1>🟦 C++ y Sistemas Embebidos</h1>
+            <p>Desarrollo de firmware, control de actuadores y procesamiento de sensores a bajo nivel usando el framework de Arduino y microcontroladores ESP32.</p>
+        </div>
+
+        <!-- PROYECTO 1 -->
+        <div class="card">
+            <h3>👓 1. Gafas Hápticas para Asistencia Visual</h3>
+            <p class="desc"><strong>Hardware:</strong> ESP32-C3 Supermini, Sensor Láser de distancia, Transistor IRF520, Motor Vibrador.<br>
+            <strong>Lógica C++:</strong> Desarrollo de un sistema vestible (wearable) que procesa datos de telemetría láser en tiempo real. El algoritmo ajusta dinámicamente la intensidad de la respuesta háptica (vibración) dependiendo de la proximidad de los obstáculos, proporcionando retroalimentación táctil a personas con discapacidad visual.</p>
+            <div class="btn-group">
+                <a href="#" target="_blank" class="btn-github">📂 Ver Código en GitHub</a>
+            </div>
+        </div>
+
+        <!-- PROYECTO 2 -->
+        <div class="card">
+            <h3>🚧 2. Barrera Automatizada con Visión Artificial</h3>
+            <p class="desc"><strong>Hardware:</strong> Microcontrolador ESP32-CAM, Servomotor SG90, LED Bicolor, Regulador 5V, Baterías Li-ion 18650.<br>
+            <strong>Lógica C++:</strong> Sistema <em>Edge AI</em> para control de acceso. El firmware en C++ inicializa la cámara, captura frames en formato QQVGA RGB565 y escanea iterativamente la matriz de píxeles en tiempo real. Al detectar la firma de color calibrada (rojo), el algoritmo dispara la lógica del servomotor para abrir la barrera y conmuta el estado de señalización del LED.</p>
+            <div class="btn-group">
+                <a href="#" target="_blank" class="btn-github">📂 Ver Código en GitHub</a>
+                <a href="#" target="_blank" class="btn-demo">▶️ Ver Demostración</a>
+            </div>
+        </div>
+
+        <!-- PROYECTO 3 -->
+        <div class="card">
+            <h3>🏎️ 3. Vehículo de Navegación Reactiva (Seguidor de Línea)</h3>
+            <p class="desc"><strong>Hardware:</strong> Arduino Uno, Sensores Infrarrojos (IR), Driver de Potencia L298N.<br>
+            <strong>Lógica C++:</strong> Sistema de control reactivo basado en lecturas digitales de reflectancia. El código C++ evalúa simultáneamente múltiples variables de los sensores IR para corregir la trayectoria del robot en milisegundos, ajustando el giro y tracción de las ruedas según los requerimientos de la pista.</p>
+            <div class="btn-group">
+                <a href="#" target="_blank" class="btn-github">📂 Ver Código en GitHub</a>
+                <a href="#" target="_blank" class="btn-demo">▶️ Ver Demostración</a>
+            </div>
+        </div>
+
+        <a href="https://isismontenegro.com" class="btn-back">⬅ Volver al Portafolio</a>
+
+    </div>
+
+</body>
+</html>
