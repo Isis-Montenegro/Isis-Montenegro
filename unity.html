@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyectos Unity | Isis Montenegro</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #0d1117; color: #c9d1d9; padding: 40px; max-width: 800px; margin: 0 auto; }
+        h1 { color: #ffffff; text-align: center; } /* Color blanco para Unity */
+        p.subtitulo { text-align: center; margin-bottom: 30px; }
+        
+        details { background: #161b22; border: 1px solid #30363d; border-radius: 8px; margin-bottom: 15px; padding: 10px; transition: all 0.3s ease; }
+        summary { font-size: 1.2em; font-weight: bold; cursor: pointer; color: #58a6ff; padding: 10px; outline: none; list-style: none; }
+        summary::-webkit-details-marker { display: none; }
+        summary::before { content: "▶ "; font-size: 0.8em; display: inline-block; transition: transform 0.2s; }
+        details[open] summary::before { transform: rotate(90deg); }
+        
+        .content { padding: 15px; border-top: 1px solid #30363d; margin-top: 10px; line-height: 1.6; }
+        
+        /* Galería de imágenes (Grid) */
+        .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 15px; margin-top: 15px; }
+        .gallery img { width: 100%; border-radius: 8px; border: 1px solid #30363d; }
+        
+        a.btn { display: inline-block; margin-top: 30px; padding: 10px 20px; background: #EE4C2C; color: white; text-decoration: none; border-radius: 5px; font-weight: bold; }
+        a.btn:hover { background: #ff5c3b; }
+    </style>
+</head>
+<body>
+
+    <h1>🎮 Mis Proyectos en Unity (C#)</h1>
+    <p class="subtitulo">Haz clic en cada título para explorar los entornos y mecánicas.</p>
+
+    <!-- PROYECTO ECHO -->
+    <details open>
+        <summary>👻 Project Echo (Terror Atmosférico)</summary>
+        <div class="content">
+            <p>Videojuego de terror desarrollado en Unity. El proyecto destaca por su diseño de niveles *low-poly*, gestión avanzada de iluminación para crear tensión atmosférica, y mecánicas de exploración en entornos abiertos e interiores detallados.</p>
+            
+            <div class="gallery">
+                <!-- Cambia "echo1.jpg" por los nombres exactos que le pusiste a tus imágenes -->
+                <img src="echo1.jpg" alt="Entorno del bosque oscuro">
+                <img src="echo2.jpg" alt="Interior con candelabro">
+                <img src="echo3.jpg" alt="Parque abandonado">
+                <img src="echo4.jpg" alt="Diseño de criatura enemiga">
+                <img src="echo5.jpg" alt="Cabaña en el bosque">
+            </div>
+        </div>
+    </details>
+
+    <!-- OTROS PROYECTOS -->
+    <details>
+        <summary>🎯 Shooter y Runner Dinámico</summary>
+        <div class="content">
+            <p>Prototipos enfocados en la programación de físicas, controladores de personaje en primera/tercera persona, y sistemas de gestión de colisiones y puntuación mediante C#.</p>
+        </div>
+    </details>
+
+    <center><a href="https://isismontenegro.com" class="btn">⬅ Volver al Portafolio</a></center>
+
+</body>
+</html>
