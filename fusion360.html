@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diseño 3D y CAD | Isis Montenegro</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #0d1117; color: #c9d1d9; padding: 40px; max-width: 800px; margin: 0 auto; }
+        h1 { color: #0696D7; text-align: center; } /* Color oficial de Fusion 360 */
+        p.subtitulo { text-align: center; margin-bottom: 30px; }
+        
+        details { background: #161b22; border: 1px solid #30363d; border-radius: 8px; margin-bottom: 15px; padding: 10px; transition: all 0.3s ease; }
+        summary { font-size: 1.2em; font-weight: bold; cursor: pointer; color: #58a6ff; padding: 10px; outline: none; list-style: none; }
+        summary::-webkit-details-marker { display: none; }
+        summary::before { content: "▶ "; font-size: 0.8em; display: inline-block; transition: transform 0.2s; }
+        details[open] summary::before { transform: rotate(90deg); }
+        
+        .content { padding: 15px; border-top: 1px solid #30363d; margin-top: 10px; line-height: 1.6; }
+        
+        .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 15px; margin-top: 15px; }
+        .gallery img { width: 100%; border-radius: 8px; border: 1px solid #30363d; }
+        
+        a.btn { display: inline-block; margin-top: 30px; padding: 10px 20px; background: #EE4C2C; color: white; text-decoration: none; border-radius: 5px; font-weight: bold; }
+        a.btn:hover { background: #ff5c3b; }
+    </style>
+</head>
+<body>
+
+    <h1>📐 Diseño CAD e Impresión 3D</h1>
+    <p class="subtitulo">Haz clic en cada categoría para ver los renders y prototipos físicos.</p>
+
+    <!-- CHASIS Y ROBÓTICA -->
+    <details>
+        <summary>🤖 Chasis y Estructuras Robóticas</summary>
+        <div class="content">
+            <p>Diseño de plataformas móviles para el robot bípedo y evasor de obstáculos. Modelado enfocado en la distribución de peso, tolerancia de ensamblaje y cinemática.</p>
+            <div class="gallery">
+                <!-- Reemplaza con tus renders o fotos -->
+                <img src="chasis_render.jpg" alt="Render del chasis en Fusion 360">
+                <img src="chasis_impreso.jpg" alt="Chasis impreso en 3D ensamblado">
+            </div>
+        </div>
+    </details>
+
+    <!-- SOPORTES Y ELECTRÓNICA -->
+    <details>
+        <summary>🔌 Soportes para Microcontroladores y Sensores</summary>
+        <div class="content">
+            <p>Piezas a medida para alojar componentes electrónicos de forma segura, incluyendo monturas para la cámara ESP32-CAM, drivers L298N y sensores ultrasónicos.</p>
+            <div class="gallery">
+                <!-- Reemplaza con tus renders o fotos -->
+                <img src="soporte_esp32.jpg" alt="Diseño de montura para ESP32-CAM">
+                <img src="soporte_ultrasonico.jpg" alt="Soporte para sensor HC-SR04">
+            </div>
+        </div>
+    </details>
+
+    <!-- PIEZAS MECÁNICAS -->
+    <details>
+        <summary>⚙️ Mecanismos y Prototipado Físico</summary>
+        <div class="content">
+            <p>Documentación del proceso de manufactura aditiva. Iteraciones de impresión 3D para ajustar engranajes, articulaciones del micro-servo SG90 y la barrera automatizada.</p>
+            <div class="gallery">
+                <!-- Reemplaza con tus renders o fotos -->
+                <img src="barrera_cad.jpg" alt="Diseño CAD de la barrera">
+                <img src="barrera_fisica.jpg" alt="Barrera física terminada">
+            </div>
+        </div>
+    </details>
+
+    <center><a href="https://isismontenegro.com" class="btn">⬅ Volver al Portafolio</a></center>
+
+</body>
+</html>
