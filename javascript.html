@@ -63,31 +63,15 @@
             font-size: 1.05em;
         }
 
-        /* IMÁGENES DE CÓDIGO CON EFECTO ZOOM */
-        .code-container {
-            background-color: #F9F9F9;
-            border-radius: 8px;
-            padding: 10px;
-            border: 1px solid #EBEBEB;
-            margin-bottom: 20px;
-            text-align: center;
+        /* GRUPO DE BOTONES (Vercel y GitHub) */
+        .btn-group {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-top: 10px;
         }
 
-        .code-container img {
-            max-width: 100%;
-            border-radius: 6px;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-            cursor: zoom-in;
-            transition: transform 0.2s ease;
-        }
-
-        .code-container img:hover {
-            transform: scale(1.02);
-        }
-
-        /* BOTONES DE VERCEL Y VOLVER */
         .btn-vercel {
-            display: inline-block;
             padding: 10px 20px;
             background-color: #000000;
             color: white;
@@ -96,12 +80,34 @@
             font-weight: bold;
             transition: background-color 0.2s;
             text-align: center;
+            display: flex;
+            align-items: center;
+            gap: 8px;
         }
 
         .btn-vercel:hover {
             background-color: #333333;
         }
 
+        .btn-github {
+            padding: 10px 20px;
+            background-color: #24292e; /* Gris oscuro oficial de GitHub */
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+            transition: background-color 0.2s;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-github:hover {
+            background-color: #444d56;
+        }
+
+        /* BOTÓN DE VOLVER AL PORTAFOLIO */
         .btn-back {
             display: block;
             width: fit-content;
@@ -118,51 +124,6 @@
         .btn-back:hover {
             background-color: #ff5c3b;
         }
-
-        /* --- ESTILOS DEL VISOR DE IMÁGENES (MODAL) --- */
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 1000;
-            padding-top: 50px;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0,0,0,0.85);
-            backdrop-filter: blur(5px);
-        }
-
-        .modal-content {
-            margin: auto;
-            display: block;
-            max-width: 90%;
-            max-height: 85vh;
-            border-radius: 8px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
-            animation: zoomModal 0.3s ease;
-        }
-
-        @keyframes zoomModal {
-            from {transform: scale(0.9); opacity: 0;}
-            to {transform: scale(1); opacity: 1;}
-        }
-
-        .close {
-            position: absolute;
-            top: 15px;
-            right: 35px;
-            color: #f1f1f1;
-            font-size: 40px;
-            font-weight: bold;
-            cursor: pointer;
-            transition: color 0.2s;
-        }
-
-        .close:hover,
-        .close:focus {
-            color: #F7DF1E;
-        }
     </style>
 </head>
 <body>
@@ -178,77 +139,45 @@
         <div class="card">
             <h3>🕹️ 1. Arcade "Cazando" (Juego Interactivo)</h3>
             <p class="desc">Videojuego web desarrollado con HTML5 y JS. Implementa motor de físicas de colisión, temporizador en tiempo real (<code>setInterval</code>), control por teclado y un sistema de niveles con aumento de dificultad progresiva.</p>
-            <div class="code-container">
-                <img src="code-cazando.jpg" alt="Código JavaScript Arcade Cazando">
+            <div class="btn-group">
+                <a href="https://juego-cazando-opal.vercel.app/" target="_blank" class="btn-vercel">🚀 Ver Proyecto Vivo (Vercel)</a>
+                <a href="https://github.com/is1s2010/juego_cazando" target="_blank" class="btn-github">📂 Ver Código en GitHub</a>
             </div>
-            <a href="https://juego-cazando-opal.vercel.app/" target="_blank" class="btn-vercel">🚀 Ver Proyecto en Vivo</a>
         </div>
 
         <!-- PROYECTO 2 -->
         <div class="card">
             <h3>💰 2. Simulador de Créditos Financieros</h3>
             <p class="desc">Aplicación de tecnología financiera (Fintech) que procesa inputs del usuario para calcular capacidad de pago, aplicar fórmulas de interés y proyectar cuotas mensuales. Usa manipulación directa del DOM para renderizar tablas dinámicas.</p>
-            <div class="code-container">
-                <img src="code-simulador.jpg" alt="Código JavaScript Simulador">
+            <div class="btn-group">
+                <a href="https://simulador-credito-zeta.vercel.app/" target="_blank" class="btn-vercel">🚀 Ver Proyecto Vivo (Vercel)</a>
+                <a href="https://github.com/is1s2010/Simulador2" target="_blank" class="btn-github">📂 Ver Código en GitHub</a>
             </div>
-            <a href="https://simulador-credito-zeta.vercel.app/" target="_blank" class="btn-vercel">🚀 Ver Proyecto en Vivo</a>
         </div>
 
         <!-- PROYECTO 3 -->
         <div class="card">
             <h3>🏆 3. Dashboard de Torneos Gamer</h3>
             <p class="desc">Plataforma de gestión competitiva que procesa arreglos y estructuras de datos en JavaScript para registrar participantes, generar métricas y renderizar la interfaz de forma dinámica sin recargar el navegador.</p>
-            <div class="code-container">
-                <img src="code-torneo.jpg" alt="Código JavaScript Torneo Gamer">
+            <div class="btn-group">
+                <a href="https://torneogamer.vercel.app/" target="_blank" class="btn-vercel">🚀 Ver Proyecto Vivo (Vercel)</a>
+                <a href="https://github.com/is1s2010/Dashboard-de-Torneos-Gamer" target="_blank" class="btn-github">📂 Ver Código en GitHub</a>
             </div>
-            <a href="https://torneogamer.vercel.app/" target="_blank" class="btn-vercel">🚀 Ver Proyecto en Vivo</a>
         </div>
         
         <!-- PROYECTO 4 -->
         <div class="card">
             <h3>🐍 4. Videojuego Clásico Snake</h3>
             <p class="desc">Recreación del clásico juego Snake. Destaca el uso de matrices para el cuerpo de la serpiente, lógica de colisiones con los bordes y control preciso de fotogramas por segundo utilizando bucles de actualización en JavaScript puro.</p>
-            <div class="code-container">
-                <img src="code-snake.jpg" alt="Código JavaScript Snake">
+            <div class="btn-group">
+                <a href="https://snake-alpha-woad.vercel.app/" target="_blank" class="btn-vercel">🚀 Ver Proyecto Vivo (Vercel)</a>
+                <a href="https://github.com/is1s2010/snake" target="_blank" class="btn-github">📂 Ver Código en GitHub</a>
             </div>
-            <a href="https://snake-alpha-woad.vercel.app/" target="_blank" class="btn-vercel">🚀 Ver Proyecto en Vivo</a>
         </div>
 
         <a href="https://isismontenegro.com" class="btn-back">⬅ Volver al Portafolio</a>
 
     </div>
-
-    <!-- EL VISOR DE IMÁGENES OCULTO (MODAL) -->
-    <div id="imageModal" class="modal">
-        <span class="close">&times;</span>
-        <img class="modal-content" id="expandedImg">
-    </div>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            var modal = document.getElementById("imageModal");
-            var modalImg = document.getElementById("expandedImg");
-            var span = document.querySelector(".close");
-            var imgs = document.querySelectorAll(".code-container img");
-
-            imgs.forEach(function(img) {
-                img.addEventListener('click', function() {
-                    modal.style.display = "block";
-                    modalImg.src = this.src;
-                });
-            });
-
-            span.addEventListener('click', function() {
-                modal.style.display = "none";
-            });
-
-            window.addEventListener('click', function(event) {
-                if (event.target == modal) {
-                    modal.style.display = "none";
-                }
-            });
-        });
-    </script>
 
 </body>
 </html>
