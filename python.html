@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Projects | Isis Montenegro</title>
+    <style>
+        /* FONDO BEIGE/CREMA ELEGANTE */
+        body {
+            background-color: #F5F0E6; 
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 40px 0;
+            color: #333333;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        /* DISEÑO DE TARJETAS TIPO LINKEDIN */
+        .card {
+            background-color: #FFFFFF;
+            border-radius: 12px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+            margin-bottom: 25px;
+            overflow: hidden;
+            padding: 25px;
+        }
+
+        .header-card {
+            text-align: center;
+            border-bottom: 4px solid #3776AB; /* Azul de Python */
+        }
+
+        .header-card h1 {
+            margin: 0 0 10px 0;
+            color: #1A1A1A;
+        }
+
+        .header-card p {
+            color: #666666;
+            margin: 0;
+            font-size: 1.1em;
+        }
+
+        /* TIPOGRAFÍA DE SECCIONES */
+        h3 {
+            margin-top: 0;
+            font-size: 22px;
+            color: #1A1A1A;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        p.desc {
+            line-height: 1.6;
+            margin: 0 0 25px 0;
+            color: #444444;
+            font-size: 1.05em;
+        }
+
+        /* GALERÍA DE CÓDIGO Y CONSOLA (2 COLUMNAS) */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        figure {
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            background-color: #F9F9F9;
+            border-radius: 8px;
+            padding: 10px;
+            border: 1px solid #EBEBEB;
+        }
+
+        figure img {
+            width: 100%;
+            border-radius: 6px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+
+        figcaption {
+            text-align: center;
+            margin-top: 10px;
+            font-size: 0.9em;
+            font-weight: bold;
+            color: #666666;
+        }
+
+        /* BOTÓN DE VOLVER */
+        .btn-back {
+            display: block;
+            width: fit-content;
+            margin: 30px auto 0 auto;
+            padding: 12px 24px;
+            background-color: #3776AB;
+            color: white;
+            text-decoration: none;
+            border-radius: 20px;
+            font-weight: bold;
+            transition: background-color 0.2s;
+        }
+
+        .btn-back:hover {
+            background-color: #2b5b84;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <!-- CABECERA DE LA PÁGINA -->
+        <div class="card header-card">
+            <h1>🐍 Fundamentos y Lógica en Python</h1>
+            <p>Scripts listos para producción con enfoque en estructuras de datos, limpieza de datos e Inteligencia Artificial.</p>
+        </div>
+
+        <!-- PROYECTO 1: REVERSE INDEX -->
+        <div class="card">
+            <h3>🔍 1. Reverse Index Builder</h3>
+            <p class="desc">Algoritmo que transforma una base de datos estructurada en un índice inverso, mapeando dinámicamente valores múltiples (como autores y géneros) de vuelta a sus claves principales. Lógica fundamental detrás de los motores de búsqueda y grafos de conocimiento.</p>
+            <div class="gallery">
+                <figure>
+                    <img src="carbon-index.jpg" alt="Código Python de Reverse Index">
+                    <figcaption>📝 Código (Type Hinting & DefaultDict)</figcaption>
+                </figure>
+                <figure>
+                    <img src="output-index.png" alt="Salida en consola de Reverse Index">
+                    <figcaption>💻 Resultado en Consola</figcaption>
+                </figure>
+            </div>
+        </div>
+
+        <!-- PROYECTO 2: ETL PIPELINE -->
+        <div class="card">
+            <h3>📊 2. Dataset Preprocessor (Pipeline ETL)</h3>
+            <p class="desc">Pipeline de procesamiento de datos automatizado que extrae, transforma y limpia conjuntos de datos crudos. Maneja valores nulos, estandariza formatos y prepara la información para el entrenamiento de modelos de Machine Learning de forma eficiente.</p>
+            <div class="gallery">
+                <figure>
+                    <img src="carbon-etl.jpg" alt="Código Python del Pipeline ETL">
+                    <figcaption>📝 Código (Manejo de Errores & Transformación)</figcaption>
+                </figure>
+                <figure>
+                    <img src="output-etl.png" alt="Salida en consola del Pipeline ETL">
+                    <figcaption>💻 Resultado en Consola</figcaption>
+                </figure>
+            </div>
+        </div>
+
+        <!-- PROYECTO 3: BFS PATHFINDING -->
+        <div class="card">
+            <h3>🗺️ 3. Algoritmo de Búsqueda BFS (Pathfinding)</h3>
+            <p class="desc">Implementación orientada a objetos del algoritmo de búsqueda en anchura (Breadth-First Search). Diseñado para encontrar la ruta más corta en matrices bidimensionales, una base esencial para la navegación espacial y el pathfinding en robótica móvil.</p>
+            <div class="gallery">
+                <figure>
+                    <img src="carbon-bfs.jpg" alt="Código Python de BFS">
+                    <figcaption>📝 Código (Lógica de Grafos & Colas)</figcaption>
+                </figure>
+                <figure>
+                    <img src="output-bfs.png" alt="Salida en consola de BFS">
+                    <figcaption>💻 Resultado en Consola</figcaption>
+                </figure>
+            </div>
+        </div>
+
+        <a href="https://isismontenegro.com" class="btn-back">⬅ Volver al Portafolio</a>
+
+    </div>
+
+</body>
+</html>
