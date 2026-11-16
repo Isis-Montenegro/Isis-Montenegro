@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Projects | Isis Montenegro</title>
+    <style>
+        /* FONDO BEIGE/CREMA ELEGANTE */
+        body {
+            background-color: #F5F0E6; 
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 40px 0;
+            color: #333333;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        /* DISEÑO DE TARJETAS TIPO LINKEDIN */
+        .card {
+            background-color: #FFFFFF;
+            border-radius: 12px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+            margin-bottom: 25px;
+            overflow: hidden;
+            padding: 25px;
+        }
+
+        .header-card {
+            text-align: center;
+            border-bottom: 4px solid #F7DF1E; /* Amarillo de JavaScript */
+        }
+
+        .header-card h1 {
+            margin: 0 0 10px 0;
+            color: #1A1A1A;
+        }
+
+        .header-card p {
+            color: #666666;
+            margin: 0;
+            font-size: 1.1em;
+        }
+
+        h3 {
+            margin-top: 0;
+            font-size: 22px;
+            color: #1A1A1A;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        p.desc {
+            line-height: 1.6;
+            margin: 0 0 20px 0;
+            color: #444444;
+            font-size: 1.05em;
+        }
+
+        /* IMÁGENES DE CÓDIGO CON EFECTO ZOOM */
+        .code-container {
+            background-color: #F9F9F9;
+            border-radius: 8px;
+            padding: 10px;
+            border: 1px solid #EBEBEB;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .code-container img {
+            max-width: 100%;
+            border-radius: 6px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+            cursor: zoom-in;
+            transition: transform 0.2s ease;
+        }
+
+        .code-container img:hover {
+            transform: scale(1.02);
+        }
+
+        /* BOTONES DE VERCEL Y VOLVER */
+        .btn-vercel {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #000000;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+            transition: background-color 0.2s;
+            text-align: center;
+        }
+
+        .btn-vercel:hover {
+            background-color: #333333;
+        }
+
+        .btn-back {
+            display: block;
+            width: fit-content;
+            margin: 30px auto 0 auto;
+            padding: 12px 24px;
+            background-color: #EE4C2C;
+            color: white;
+            text-decoration: none;
+            border-radius: 20px;
+            font-weight: bold;
+            transition: background-color 0.2s;
+        }
+
+        .btn-back:hover {
+            background-color: #ff5c3b;
+        }
+
+        /* --- ESTILOS DEL VISOR DE IMÁGENES (MODAL) --- */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            padding-top: 50px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.85);
+            backdrop-filter: blur(5px);
+        }
+
+        .modal-content {
+            margin: auto;
+            display: block;
+            max-width: 90%;
+            max-height: 85vh;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+            animation: zoomModal 0.3s ease;
+        }
+
+        @keyframes zoomModal {
+            from {transform: scale(0.9); opacity: 0;}
+            to {transform: scale(1); opacity: 1;}
+        }
+
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: color 0.2s;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #F7DF1E;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <div class="card header-card">
+            <h1>🟨 Ecosistema Web en JavaScript</h1>
+            <p>Aplicaciones interactivas, manipulación del DOM y lógica de videojuegos.</p>
+        </div>
+
+        <!-- PROYECTO 1 -->
+        <div class="card">
+            <h3>🕹️ 1. Arcade "Cazando" (Juego Interactivo)</h3>
+            <p class="desc">Videojuego web desarrollado con HTML5 Canvas y JS. Implementa motor de físicas de colisión, temporizador en tiempo real (`setInterval`), control por teclado, efectos de audio y un sistema de niveles con aumento de dificultad progresiva bajo una estética neón.</p>
+            <div class="code-container">
+                <img src="code-cazando.jpg" alt="Código JavaScript Arcade">
+            </div>
+            <a href="https://juego-limones-ecru.vercel.app/" target="_blank" class="btn-vercel">🚀 Ver Proyecto en Vivo (Vercel)</a>
+        </div>
+
+        <!-- PROYECTO 2 -->
+        <div class="card">
+            <h3>💰 2. Simulador de Créditos Financieros</h3>
+            <p class="desc">Aplicación de tecnología financiera (Fintech) que procesa inputs del usuario para calcular capacidad de pago, aplicar fórmulas de interés simple y proyectar cuotas mensuales. Usa manipulación directa del DOM para renderizar resultados financieros instantáneos.</p>
+            <div class="code-container">
+                <img src="code-simulador.jpg" alt="Código JavaScript Simulador">
+            </div>
+            <!-- Cambia este enlace por el real de tu simulador -->
+            <a href="#" target="_blank" class="btn-vercel">🚀 Ver Proyecto en Vivo (Vercel)</a>
+        </div>
+
+        <!-- PROYECTO 3 -->
+        <div class="card">
+            <h3>👍 3. Sistema de Votación y Eventos (Gaming)</h3>
+            <p class="desc">Plataforma de interfaz interactiva que utiliza <em>Event Listeners</em> para gestionar contadores de votos dinámicos en temáticas de gaming (Minecraft vs Roblox). Modifica el HTML en tiempo real sin recargar la página e incluye lógica de validación de usuarios.</p>
+            <div class="code-container">
+                <img src="code-votos.jpg" alt="Código JavaScript Votación">
+            </div>
+            <!-- Cambia este enlace por el real de tu sistema de likes -->
+            <a href="#" target="_blank" class="btn-vercel">🚀 Ver Proyecto en Vivo (Vercel)</a>
+        </div>
+        
+        <!-- PROYECTO 4 -->
+        <div class="card">
+            <h3>📐 4. Conversor de Unidades Interactivo</h3>
+            <p class="desc">Herramienta matemática que convierte medidas (ej. millas a kilómetros) al instante. Destaca por su código limpio, separación de responsabilidades (funciones matemáticas vs. funciones de interfaz) e integración impecable con CSS.</p>
+            <div class="code-container">
+                <img src="code-calculadora.jpg" alt="Código JavaScript Calculadora">
+            </div>
+            <!-- Cambia este enlace por el real de tu calculadora -->
+            <a href="#" target="_blank" class="btn-vercel">🚀 Ver Proyecto en Vivo (Vercel)</a>
+        </div>
+
+        <a href="https://isismontenegro.com" class="btn-back">⬅ Volver al Portafolio</a>
+
+    </div>
+
+    <!-- EL VISOR DE IMÁGENES OCULTO (MODAL) -->
+    <div id="imageModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="expandedImg">
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var modal = document.getElementById("imageModal");
+            var modalImg = document.getElementById("expandedImg");
+            var span = document.querySelector(".close");
+            var imgs = document.querySelectorAll(".code-container img");
+
+            imgs.forEach(function(img) {
+                img.addEventListener('click', function() {
+                    modal.style.display = "block";
+                    modalImg.src = this.src;
+                });
+            });
+
+            span.addEventListener('click', function() {
+                modal.style.display = "none";
+            });
+
+            window.addEventListener('click', function(event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
